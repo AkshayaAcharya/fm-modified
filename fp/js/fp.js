@@ -99,7 +99,7 @@ function checkResult()
 			idd1.parentNode.removeChild(idd1);
 			ansId.classList.add("resultStyle");
 			ansId.style.color = "black";
-			ansId.innerHTML= compareVal+checkUnit;
+			ansId.innerHTML= compareVal.toFixed(4)+checkUnit;
 			goToNextFunction();
 		}
 	}
@@ -405,6 +405,7 @@ function magic()
 		document.getElementById('71').style.visibility="hidden";
 		document.getElementById('73').style.visibility="hidden";
 		document.getElementById('73c').style.visibility="hidden";
+		document.getElementById('73d').style.visibility="hidden";
 		document.getElementById('73a').style.visibility="hidden";
 		document.getElementById('73b').style.visibility="hidden";
 		document.getElementById('74').style.visibility="hidden";
@@ -554,10 +555,10 @@ function magic()
 			
 			if(dia=="50mm")
 			{
-				document.getElementById('lw').innerHTML="Left Limb Reading(LL)&nbsp=&nbsp"+m50[0][p]+"cm";
-				document.getElementById('rw').innerHTML="Right Limb Reading(RL)&nbsp=&nbsp"+m50[1][p]+"cm";
+				document.getElementById('lw').innerHTML="Left Limb Reading (LL)&nbsp=&nbsp"+m50[0][p]+"cm";
+				document.getElementById('rw').innerHTML="Right Limb Reading (RL)&nbsp=&nbsp"+m50[1][p]+"cm";
 				HVal = m50[3][p];
-				document.getElementById('hl').innerHTML="Head Loss(H) = ";
+				document.getElementById('hl').innerHTML="Head Loss (H) = ";
 				setTimeout(function(){
 					idInput = document.getElementById('hl');
 					userCalculation(idInput);
@@ -567,10 +568,10 @@ function magic()
 			else if(dia=="40mm")
 			{
 
-				document.getElementById('lw').innerHTML="Left Limb Reading(LL)&nbsp=&nbsp"+m40[0][p]+"cm";
-				document.getElementById('rw').innerHTML="Right Limb Reading(RL)&nbsp=&nbsp"+m40[1][p]+"cm";
+				document.getElementById('lw').innerHTML="Left Limb Reading (LL)&nbsp=&nbsp"+m40[0][p]+"cm";
+				document.getElementById('rw').innerHTML="Right Limb Reading (RL)&nbsp=&nbsp"+m40[1][p]+"cm";
 				HVal = m40[3][p];
-				document.getElementById('hl').innerHTML="Head Loss(H) = ";
+				document.getElementById('hl').innerHTML="Head Loss (H) = ";
 				setTimeout(function(){
 					idInput = document.getElementById('hl');
 					userCalculation(idInput);
@@ -579,10 +580,10 @@ function magic()
 			}
 			else if(dia=="25mm")
 			{
-			document.getElementById('lw').innerHTML="Left Limb Reading(LL)&nbsp=&nbsp"+m25[0][p]+"cm";
-			document.getElementById('rw').innerHTML="Right Limb Reading(RL)&nbsp=&nbsp"+m25[1][p]+"cm";
+			document.getElementById('lw').innerHTML="Left Limb Reading (LL)&nbsp=&nbsp"+m25[0][p]+"cm";
+			document.getElementById('rw').innerHTML="Right Limb Reading (RL)&nbsp=&nbsp"+m25[1][p]+"cm";
 			HVal = m25[3][p];
-			document.getElementById('hl').innerHTML="Head Loss(H) = ";
+			document.getElementById('hl').innerHTML="Head Loss (H) = ";
 			setTimeout(function(){
 				idInput = document.getElementById('hl');
 				userCalculation(idInput);
@@ -591,10 +592,10 @@ function magic()
 			}
 			else if(dia=="20mm")
 			{
-			document.getElementById('lw').innerHTML="Left Limb Reading(LL)&nbsp=&nbsp"+m20[0][p]+"cm";
-			document.getElementById('rw').innerHTML="Right Limb Reading(RL)&nbsp=&nbsp"+m20[1][p]+"cm";
+			document.getElementById('lw').innerHTML="Left Limb Reading (LL)&nbsp=&nbsp"+m20[0][p]+"cm";
+			document.getElementById('rw').innerHTML="Right Limb Reading (RL)&nbsp=&nbsp"+m20[1][p]+"cm";
 			HVal = m20[3][p];
-			document.getElementById('hl').innerHTML="Head Loss(H) = ";
+			document.getElementById('hl').innerHTML="Head Loss (H) = ";
 			setTimeout(function(){
 				idInput = document.getElementById('hl');
 				userCalculation(idInput);
@@ -603,10 +604,10 @@ function magic()
 			}
 			else if(dia=="15mm")
 			{
-			document.getElementById('lw').innerHTML="Left Limb Reading(LL)&nbsp=&nbsp"+m15[0][p]+"cm";
-			document.getElementById('rw').innerHTML="Right Limb Reading(RL)&nbsp=&nbsp"+m15[1][p]+"cm";
+			document.getElementById('lw').innerHTML="Left Limb Reading (LL)&nbsp=&nbsp"+m15[0][p]+"cm";
+			document.getElementById('rw').innerHTML="Right Limb Reading (RL)&nbsp=&nbsp"+m15[1][p]+"cm";
 			HVal = m15[3][p];
-			document.getElementById('hl').innerHTML="Head Loss(H) = ";
+			document.getElementById('hl').innerHTML="Head Loss (H) = ";
 			setTimeout(function(){
 				idInput = document.getElementById('hl');
 				userCalculation(idInput);
@@ -704,9 +705,10 @@ function magic()
 		document.getElementById('time').style.visibility="hidden";
 		
 		document.getElementById('71').style.visibility="visible";
-		document.getElementById('72').innerHTML="Diameter of pipe(d) = "+dia;
+		document.getElementById('72').innerHTML="Diameter of pipe (d) = "+dia;
 		document.getElementById('73').style.visibility="visible";
 		document.getElementById('73c').style.visibility="visible";
+		document.getElementById('73d').style.visibility="visible";
 		document.getElementById('74').style.visibility="visible";
 		document.getElementById('75').style.visibility="visible";
 		document.getElementById('76').style.visibility="visible";
@@ -717,8 +719,8 @@ function magic()
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73b').style.visibility="visible";
-			document.getElementById('73a').innerHTML="Head Loss(H)=&nbsp"+m50[3][p].toFixed(2)+"cm";
-			document.getElementById('73b').innerHTML="Time taken(t)=&nbsp"+m50[2][p].toFixed(2)+"s";
+			document.getElementById('73a').innerHTML="Head Loss (H)=&nbsp"+m50[3][p].toFixed(2)+"cm";
+			document.getElementById('73b').innerHTML="Time taken (t)=&nbsp"+m50[2][p].toFixed(2)+"sec";
 			qVal = m50[4][p];
 			document.getElementById('74').innerHTML="Q<sub>act</sub> = ";
 			idInput = document.getElementById('74');
@@ -728,8 +730,8 @@ function magic()
 		{
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73b').style.visibility="visible";
-			document.getElementById('73a').innerHTML="Head Loss(H)=&nbsp"+m40[3][p].toFixed(2)+"cm";
-			document.getElementById('73b').innerHTML="Time taken(t)=&nbsp"+m40[2][p].toFixed(2)+"s";
+			document.getElementById('73a').innerHTML="Head Loss (H)=&nbsp"+m40[3][p].toFixed(2)+"cm";
+			document.getElementById('73b').innerHTML="Time taken (t)=&nbsp"+m40[2][p].toFixed(2)+"sec";
 			qVal = m40[4][p];
 			document.getElementById('74').innerHTML="Q<sub>act</sub> = ";
 			idInput = document.getElementById('74');
@@ -740,8 +742,8 @@ function magic()
 		{
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73b').style.visibility="visible";
-			document.getElementById('73a').innerHTML="Head Loss(H)=&nbsp"+m25[3][p].toFixed(2)+"cm";
-			document.getElementById('73b').innerHTML="Time taken(t)=&nbsp"+m25[2][p].toFixed(2)+"s";
+			document.getElementById('73a').innerHTML="Head Loss (H)=&nbsp"+m25[3][p].toFixed(2)+"cm";
+			document.getElementById('73b').innerHTML="Time taken (t)=&nbsp"+m25[2][p].toFixed(2)+"sec";
 			qVal = m25[4][p];
 			document.getElementById('74').innerHTML="Q<sub>act</sub> = ";
 			idInput = document.getElementById('74');
@@ -752,8 +754,8 @@ function magic()
 		{
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73b').style.visibility="visible";
-			document.getElementById('73a').innerHTML="Head Loss(H)=&nbsp"+m20[3][p].toFixed(2)+"cm";
-			document.getElementById('73b').innerHTML="Time taken(t)=&nbsp"+m20[2][p].toFixed(2)+"s";
+			document.getElementById('73a').innerHTML="Head Loss (H)=&nbsp"+m20[3][p].toFixed(2)+"cm";
+			document.getElementById('73b').innerHTML="Time taken (t)=&nbsp"+m20[2][p].toFixed(2)+"sec";
 			qVal = m20[4][p];
 			document.getElementById('74').innerHTML="Q<sub>act</sub> = ";
 			idInput = document.getElementById('74');
@@ -764,8 +766,8 @@ function magic()
 		{
 			document.getElementById('73a').style.visibility="visible";
 			document.getElementById('73b').style.visibility="visible";
-			document.getElementById('73a').innerHTML="Head Loss(H)=&nbsp"+m15[3][p].toFixed(2)+"cm";
-			document.getElementById('73b').innerHTML="Time taken(t)=&nbsp"+m15[2][p].toFixed(2)+"s";
+			document.getElementById('73a').innerHTML="Head Loss (H)=&nbsp"+m15[3][p].toFixed(2)+"cm";
+			document.getElementById('73b').innerHTML="Time taken (t)=&nbsp"+m15[2][p].toFixed(2)+"sec";
 			qVal = m15[4][p];
 			document.getElementById('74').innerHTML="Q<sub>act</sub> = ";
 			idInput = document.getElementById('74');
@@ -798,7 +800,7 @@ function step7Next () {
 	{
 	 favg=(f1+f2+f3)/3.0;
 	 document.getElementById("77").style.visibility="visible";
-	 document.getElementById("77").innerHTML="Average Analytical Friction Factor(f)&nbsp=&nbsp"+favg.toFixed(2)+"&nbsp";
+	 document.getElementById("77").innerHTML="Average Analytical Friction Factor(f)&nbsp=<span class='resultStyle'>&nbsp"+favg.toFixed(2)+"&nbsp</span>";
 	 document.getElementById("nextButton").style.visibility="hidden";	
 	}
 }
@@ -1086,27 +1088,27 @@ function step7Next () {
 		if(dia=="50mm")
 		{
 		document.getElementById('time').style.visibility="visible";
-		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m50[2][p]+"s";
+		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m50[2][p]+"sec";
 		}
 		else if(dia=="40mm")
 		{
 		document.getElementById('time').style.visibility="visible";
-		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m40[2][p]+"s";
+		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m40[2][p]+"sec";
 		}
 		else if(dia=="25mm")
 		{
 		document.getElementById('time').style.visibility="visible";
-		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m25[2][p]+"s";
+		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m25[2][p]+"sec";
 		}
 		else if(dia=="40mm")
 		{
 		document.getElementById('time').style.visibility="visible";
-		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m20[2][p]+"s";
+		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m20[2][p]+"sec";
 		}
 		else if(dia=="15mm")
 		{
 		document.getElementById('time').style.visibility="visible";
-		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m15[2][p]+"s";
+		document.getElementById('time').innerHTML="Time required by water to fill 10cm height&nbsp=&nbsp"+m15[2][p]+"sec";
 		}
 		
 		document.getElementById('nextButton').style.visibility="visible";
