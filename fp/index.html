@@ -11,7 +11,8 @@
 <script type="text/javascript" src= "js/fp.js"></script>
 <script type="text/javascript" src= "js/jquery-1.4.2.min"></script>
 <script type="text/javascript" src= "js/ej.web.all.js"></script>
-
+<!--Stylesheet to display Math functions -->
+<link href="css/mathstyle.css" rel="stylesheet" />
 
 <script>
 var simsubscreennum=0;
@@ -264,7 +265,7 @@ Select the Pipe of required diameter:
 <p id="rw" style="position: absolute; left: 460px; top: 370px;font-family:verdana;font-size:14px;"></p>
 <div class="tooltip" style="position:absolute;left: 460px; top: 420px;">
     <p id="hl" style="font-family:verdana;font-size:14px;"></p>
-    <span class="tooltiptext">H(cm) = 12.6 * (LL - RL)</span>
+    <span class="tooltiptext">H(cm) = 12.6 x (LL - RL)</span>
 </div>
 
 
@@ -316,19 +317,23 @@ Select the Pipe of required diameter:
 <p id="73a" style="position:absolute;left:220px; top: 170px;font-family:verdana;font-size:14px;"></p>
 <p id="73b" style="position:absolute;left:220px; top: 200px;font-family:verdana;font-size:14px;"> </p>
 <p id="73c" style="position:absolute;left: 220px; top: 230px;font-family:verdana;font-size:14px;">Rise (h) = 10cm</p>
-<p id="73d" style="position:absolute;left: 220px; top: 260px;font-family:verdana;font-size:14px;">Acceleration due to gravity (g) = 981 cm/sec2</p>
+<p id="73d" style="position:absolute;left: 220px; top: 260px;font-family:verdana;font-size:14px;">Acceleration due to gravity (g) = 981 cm/sec<sup>2</sup> </p>
 <strong class="incanvas" style="position:absolute;top: 290px; left:50px;font-family: verdana;"><h2>Calculations</h2></strong>
 <div class="tooltip" style="position:absolute;left: 220px; top: 320px;">
     <p id="74" style="font-family:verdana;font-size:14px;"></p>
-    <span class="tooltiptext">Q<sub>act</sub> (cm<sup>3</sup>/s) = (Axh/t)</span>
+    <!-- <span class="tooltiptext">Q<sub>act</sub> (cm<sup>3</sup>/s) = (Axh/t)</span> -->
+    <span class="tooltiptext">Q<sub>act</sub> (cm<sup>3</sup>/sec)= <span class="frac"><sup>A x h</sup><span>&frasl;</span><sub>t</sub></span></span>
 </div>
 <div class="tooltip" style="position:absolute;left: 220px; top: 360px;">
     <p id="75" style="font-family:verdana;font-size:14px;"></p>
-    <span class="tooltiptext">v (cm/sec) = Q<sub>act</sub> / A</span>
+    <!-- <span class="tooltiptext">v (cm/sec) = Q<sub>act</sub> / A</span> -->
+    <span class="tooltiptext">v (cm/sec)= <span class="frac"><sup>Q<sub>act</sub></sup><span>&frasl;</span><sub>A</sub></span></span>
 </div>
 <div class="tooltip" style="position:absolute;left: 220px; top: 400px;">
     <p id="76" style="font-family:verdana;font-size:14px;"></p>
-    <span class="tooltiptext">f = (2 * g * d)/(v<sup>2</sup>) * (H / l)</sup></span>
+    <!-- <span class="tooltiptext">f = (2 * g * d)/(v<sup>2</sup>) * (H / l)</sup></span> -->
+    <span class="tooltiptext">f = <span class="frac"><sup>2gd</sup><span>&frasl;</span><sub>v<sup>2</sup></sub></span> x <span class="frac"><sup>H</sup><span>&frasl;</span><sub>l</sub></span>
+
 </div>
 
 <p id="77" style="position:absolute;left: 220px; top: 440px;font-family:verdana;font-size:14px;"> </p> 
@@ -362,6 +367,6 @@ Select the Pipe of required diameter:
 <p class ="close2" id="close5" style="position:absolute;visibility:hidden;font-family:verdana; font-size:14px;left: 105px; top:480px; height: 30px; z-index: 10;">CLOSED</p>
 
 
-<div id="copyright"> &copy; 2016 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+<div id="copyright"> &copy; 2016-2020 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
 </body>
 </html>

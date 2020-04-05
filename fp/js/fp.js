@@ -110,7 +110,7 @@ function checkResult()
 		idd1.parentNode.removeChild(idd1);
 		ansId.classList.add("resultStyle");
 		ansId.style.color = "black";
-		ansId.innerHTML= compareVal+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
+		ansId.innerHTML= compareVal.toFixed(4)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
 		goToNextFunction();
 	}
 }
@@ -165,7 +165,7 @@ function goToNextFunction()
 						break;
 		}
 		document.getElementById('76').style.visibility="visible";
-		document.getElementById('76').innerHTML = "Analytical Friction Factor(f) =  ";
+		document.getElementById('76').innerHTML = "Analytical Friction Factor (f) =  ";
 		idInput = document.getElementById('76');
 		userCalculation(idInput);
 	}
@@ -793,15 +793,15 @@ function magic()
 function step7Next () {
 	if(repeat>=1 && repeat<3)
 	{
-	simsubscreennum=2;
-	document.getElementById("nextButton").style.visibility="visible";
+		simsubscreennum=2;
+		document.getElementById("nextButton").style.visibility="visible";
 	}
 	else if(repeat==3)
 	{
-	 favg=(f1+f2+f3)/3.0;
-	 document.getElementById("77").style.visibility="visible";
-	 document.getElementById("77").innerHTML="Average Analytical Friction Factor(f)&nbsp=<span class='resultStyle'>&nbsp"+favg.toFixed(2)+"&nbsp</span>";
-	 document.getElementById("nextButton").style.visibility="hidden";	
+		favg=(f1+f2+f3)/3.0;
+		document.getElementById("77").style.visibility="visible";
+		document.getElementById("77").innerHTML="Average Analytical Friction Factor (f)&nbsp=<span class='resultStyle'>&nbsp"+favg.toFixed(2)+"&nbsp</span>";
+		document.getElementById("nextButton").style.visibility="hidden";	
 	}
 }
 
