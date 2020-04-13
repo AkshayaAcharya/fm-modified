@@ -80,7 +80,10 @@ function checkResult()
 	{
 		// idd.setAttribute("placeholder","Please enter value");
 	}
-	else if(Math.round(idd.value) != Math.round(compareVal))
+	// else if(idd.value != roundd(compareVal,2) || ((idd.value<= roundd((compareVal-0.5),2)) && idd.value>=roundd((compareVal+0.5),2)))
+		// Math.floor(num * 10000)/10000
+	// else if(Math.round(idd.value) != Math.round(compareVal))
+	else if(((Math.floor(idd.value * 10000)/10000) != (Math.floor(compareVal * 10000)/10000)) || ((Math.floor(idd.value * 1000)/1000) != (Math.floor(compareVal * 1000)/1000)) || ((Math.floor(idd.value * 100)/100) != (Math.floor(compareVal * 100)/100)) || ((Math.floor(idd.value * 10)/10) != (Math.floor(compareVal * 10)/10)))
 	{
 		// console.log(2);
 		qCount++;
@@ -100,7 +103,7 @@ function checkResult()
 			idd1.parentNode.removeChild(idd1);
 			ansId.classList.add("resultStyle");
 			ansId.style.color = "black";
-			ansId.innerHTML= compareVal.toFixed(4)+checkUnit;
+			ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit;
 			goToNextFunction();
 		}
 	}
@@ -111,7 +114,7 @@ function checkResult()
 		idd1.parentNode.removeChild(idd1);
 		ansId.classList.add("resultStyle");
 		ansId.style.color = "black";
-		ansId.innerHTML= compareVal.toFixed(4)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
+		ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
 		goToNextFunction();
 	}
 }
@@ -1236,3 +1239,9 @@ function step720()
 		document.getElementById('b2').onclick="";
 
 	}
+	
+	//function to round off number n to d decimal places
+function roundd( n, d )
+{
+	return Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+}

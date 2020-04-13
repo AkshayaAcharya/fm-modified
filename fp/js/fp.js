@@ -79,7 +79,8 @@ function checkResult()
 	{
 		// idd.setAttribute("placeholder","Please enter value");
 	}
-	else if(Math.round(idd.value) != Math.round(compareVal))
+	// else if(Math.round(idd.value) != Math.round(compareVal))
+	else if(((Math.floor(idd.value * 10000)/10000) != (Math.floor(compareVal * 10000)/10000)) || ((Math.floor(idd.value * 1000)/1000) != (Math.floor(compareVal * 1000)/1000)) || ((Math.floor(idd.value * 100)/100) != (Math.floor(compareVal * 100)/100)) || ((Math.floor(idd.value * 10)/10) != (Math.floor(compareVal * 10)/10)))
 	{
 		// console.log(2);
 		qCount++;
@@ -99,7 +100,7 @@ function checkResult()
 			idd1.parentNode.removeChild(idd1);
 			ansId.classList.add("resultStyle");
 			ansId.style.color = "black";
-			ansId.innerHTML= compareVal.toFixed(4)+checkUnit;
+			ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit;
 			goToNextFunction();
 		}
 	}
@@ -110,7 +111,7 @@ function checkResult()
 		idd1.parentNode.removeChild(idd1);
 		ansId.classList.add("resultStyle");
 		ansId.style.color = "black";
-		ansId.innerHTML= compareVal.toFixed(4)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
+		ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
 		goToNextFunction();
 	}
 }
@@ -958,6 +959,7 @@ function step7Next () {
 		     // Standard syntax
 	     document.getElementById("arr").style.transform = "rotate(35deg)";
 		
+         document.getElementById('b2').onclick= '';
          document.getElementById('b1').onclick=function(){step32();}
 	}
 	
