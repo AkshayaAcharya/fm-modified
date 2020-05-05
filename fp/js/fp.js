@@ -107,7 +107,7 @@ function checkResult()
 			idd1.parentNode.removeChild(idd1);
 			ansId.classList.add("resultStyle");
 			ansId.style.color = "black";
-			ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit;
+			ansId.innerHTML= resultCount == 2 ? (Math.floor(compareVal * 10000)/10000)+checkUnit : (Math.floor(compareVal * 100)/100)+checkUnit ;
 			goToNextFunction();
 		}
 	}
@@ -118,7 +118,7 @@ function checkResult()
 		idd1.parentNode.removeChild(idd1);
 		ansId.classList.add("resultStyle");
 		ansId.style.color = "black";
-		ansId.innerHTML= (Math.floor(compareVal * 10000)/10000)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
+		ansId.innerHTML= resultCount == 2 ? (Math.floor(compareVal * 10000)/10000)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>" : (Math.floor(compareVal * 100)/100)+checkUnit+"<span style='color:green;font-size:20px;'>&#10004;</span>";
 		goToNextFunction();
 	}
 }
